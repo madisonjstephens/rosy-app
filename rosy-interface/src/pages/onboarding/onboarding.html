@@ -33,4 +33,12 @@
         </div>
         <div id="privacy-policy">privacy policy</div>
     </div>
+    <div *ngIf="onboardingStep === 2">
+        <div class="centered onboarding-centered" id="onboarding-2">
+            <div class="fancy-title">cycle</div>
+            <ion-input type="file"></ion-input>
+            <button ion-button color="secondary" class="rosy-button" (click)="nextOnboardingStep()">I'm ready!</button>
+        </div>
+        <div id="privacy-policy">privacy policy</div>
+    </div>
 </ion-content>
