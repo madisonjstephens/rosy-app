@@ -174,3 +174,17 @@ page-onboarding {
 #onboarding-2 .rosy-button {
     text-align: center;
 }
+
+#onboarding-4 {
+    margin-top: 170px;
+}
+
+#goal-images {
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.wider-goal {
+    width: 100% !important;
+}

@@ -62,14 +62,14 @@
     </div>
     <div *ngIf="onboardingStep === 4">
         <img id="cycle" src="./assets/goals.png">
-        <div class="centered onboarding-centered" id="onboarding-3">
+        <div class="centered onboarding-centered" id="onboarding-4">
             <div class="fancy-title"></div>
-            <button ion-button color="secondary" class="rosy-button">is your period regular?</button>
-            <button ion-button color="secondary" class="rosy-button">about how many days does it last?</button>
-            <button ion-button color="secondary" class="rosy-button">do you get pms?</button>
-            <button ion-button color="secondary" class="rosy-button">do you use birth control?</button>
-            <button ion-button color="secondary" class="rosy-button">what's your preferred hygiene product?</button>
-            <button ion-button color="secondary" class="rosy-button">any pre-existing conditions?</button>
+            <div id="goal-images">
+                <div *ngFor="let image of goalImages; let i = index" [class.wider-goal]="((i+1)%3 === 0)">
+                    <img style="width: {{image.width}}" src="./assets/{{image.src}}">
+                    <div>{{image.text}}</div>
+                </div>
+            </div>
         </div>
         <div class="onboarding-checkmarks">
             <div *ngFor="let checkmark of cycleStepBooleans; let i = index">

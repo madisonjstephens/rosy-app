@@ -18,6 +18,56 @@ export class OnboardingPage {
         false,
         false
     ]
+    private goalImages: any[] = [
+        {
+            src: 'streamline.png',
+            text: 'streamline routine',
+            selected: false,
+            width: '50px'
+        },
+        {
+            src: 'exercise.png',
+            text: 'exercise',
+            selected: false,
+            width: '50px'
+        },
+        {
+            src: 'pregnancy.png',
+            text: 'pregnancy',
+            selected: false,
+            width: '50px'
+        },
+        {
+            src: 'stress.png',
+            text: 'stress relief',
+            selected: false,
+            width: '50px'
+        },
+        {
+            src: 'balance.png',
+            text: 'balance',
+            selected: false,
+            width: '50px'
+        },
+        {
+            src: 'health.png',
+            text: 'health tracking',
+            selected: false,
+            width: '50px'
+        },
+        {
+            src: 'nutrition.png',
+            text: 'nutrition',
+            selected: false,
+            width: '50px'
+        },
+        {
+            src: 'clarity.png',
+            text: 'clarity',
+            selected: false,
+            width: '50px'
+        }
+    ]
 
     constructor(public navCtrl: NavController) {
 
