@@ -49,3 +49,59 @@ page-onboarding {
     width: 70%;
     position: absolute;
 }
+
+.centered {
+    text-align: center;
+}
+
+.onboarding-centered {
+    position: relative;
+    top: -90px;
+    margin: 0 auto;
+}
+
+#onboarding-1 {
+    font-family: "Karla-Italic";
+    top: 150px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#onboarding-1 > .rosy-button {
+    font-family: "Karla";
+    width: 80%;
+    margin: 50px auto;
+}
+
+#privacy-policy {
+    text-align: center;
+    margin-top: 70%;
+}
+
+#weird-images {
+    margin-bottom: 30px;
+}
+
+#weird-images > img {
+    margin: 0 10px;
+}
+
+#star {
+    position: relative;
+    top: -25px;
+    width: 30px;
+}
+
+#lightning {
+    width: 45px;
+}
+
+#alien {
+    width: 55px;
+}
+
+#planet {
+    width: 70px;
+    position: relative;
+    top: -10px;
+}

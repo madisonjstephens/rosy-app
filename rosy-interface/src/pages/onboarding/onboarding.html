@@ -1,14 +1,36 @@
 <ion-content padding>
-    <img id="logo" src="./assets/logo.png">
-    <div *ngIf="!loggingIn" id="signup-buttons">
-        <button ion-button color="secondary" class="rosy-button">sign up with google <ion-icon name="logo-google"></ion-icon></button>
-        <button ion-button color="secondary" class="rosy-button">sign up with facebook <ion-icon name="logo-facebook"></ion-icon></button>
-        <button ion-button color="secondary" class="rosy-button" (click)="signupByEmail()">sign up with email <ion-icon name="mail"></ion-icon></button>
+    <div *ngIf="!loggingIn">
+        <img id="logo" src="./assets/logo.png">
+        <div  id="signup-buttons">
+            <button ion-button color="secondary" class="rosy-button">sign up with google <ion-icon name="logo-google"></ion-icon></button>
+            <button ion-button color="secondary" class="rosy-button">sign up with facebook <ion-icon name="logo-facebook"></ion-icon></button>
+            <button ion-button color="secondary" class="rosy-button" (click)="gotoEmailSignup()">sign up with email <ion-icon name="mail"></ion-icon></button>
+        </div>
+        <div id="login">already #rosy? login!</div>
     </div>
-    <div *ngIf="emailSignup" id="email-signup">
-        <div class="login-input">email<ion-input type="text"></ion-input></div>
-        <div class="login-input">password<ion-input type="password"></ion-input></div>
-        <button ion-button color="secondary" class="rosy-button">get #rosy</button>
+    <div *ngIf="emailSignup && !loggedIn">
+        <img id="logo" src="./assets/logo.png">
+        <div id="email-signup">
+            <div class="login-input">email<ion-input type="text" [(ngModel)]="email"></ion-input></div>
+            <div class="login-input">password<ion-input type="password" [(ngModel)]="password"></ion-input></div>
+            <button ion-button color="secondary" class="rosy-button" (click)="signupByEmail(email, password)">get #rosy</button>
+        </div>
     </div>
-    <div id="login">already #rosy? login!</div>
+    <div *ngIf="onboardingStep === 1">
+        <div class="centered onboarding-centered" id="onboarding-1">
+            <div id="weird-images">
+                <img id="star" src="./assets/star.png">
+                <img id="lightning" src="./assets/lightning.png">
+                <img id="alien" src="./assets/alien.png">
+                <img id="planet" src="./assets/planet.png">
+            </div>
+            this is ur space!<br>
+            to optimize this new dimension, we'll<br>
+            ask u about ur health, habits, and goals.<br>
+            so before u move in, do u mind if we get<br>
+            familiar?<br>
+            <button ion-button color="secondary" class="rosy-button" (click)="nextOnboardingStep()">I'm ready!</button>
+        </div>
+        <div id="privacy-policy">privacy policy</div>
+    </div>
 </ion-content>
