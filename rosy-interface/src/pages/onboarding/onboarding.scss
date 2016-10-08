@@ -1,0 +1,51 @@
+page-onboarding {
+    font-family: "Karla";
+}
+
+#logo {
+    margin-top: 10%;
+}
+
+#signup-buttons {
+    position: relative;
+    top: -90px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.rosy-button {
+    width: 100%;
+    text-align: center;
+    border-radius: 0px;
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.50);
+}
+
+#signup-buttons > .rosy-button ion-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 25px;
+}
+
+#login {
+    margin-top: 25%;
+    text-align: center;
+}
+
+#email-signup {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.login-input {
+    background: #FFF;
+    opacity: 0.7;
+    margin-bottom: 5px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+.login-input > ion-input {
+    width: 70%;
+    position: absolute;
+}
