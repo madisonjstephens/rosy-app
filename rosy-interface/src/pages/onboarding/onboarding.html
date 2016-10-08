@@ -34,6 +34,15 @@
         <div id="privacy-policy">privacy policy</div>
     </div>
     <div *ngIf="onboardingStep === 2">
+        <img id="cycle" src="./assets/cycle.png">
+        <img id="venus" src="./assets/Venus Symbols Conjoined.png">
+        <div id="onboarding-2">
+            <button ion-button color="secondary" class="rosy-button">import my period data </button>
+            <button ion-button color="secondary" class="rosy-button" (click)="nextOnboardingStep()">start from scratch </button>
+        </div>
+    </div>
+    <div *ngIf="onboardingStep === 3">
+        <img id="cycle" src="./assets/cycle.png">
         <div class="centered onboarding-centered" id="onboarding-3">
             <div class="fancy-title"></div>
             <button ion-button color="secondary" class="rosy-button">is your period regular?</button>
@@ -43,13 +52,31 @@
             <button ion-button color="secondary" class="rosy-button">what's your preferred hygiene product?</button>
             <button ion-button color="secondary" class="rosy-button">any pre-existing conditions?</button>
         </div>
-    </div>
-    <div *ngIf="onboardingStep === 3">
-        <div class="onboarding-centered" id="onboarding-2">
-            <div class="fancy-title">cycle</div>
-            <ion-input type="file"></ion-input>
-            <button ion-button color="secondary" class="rosy-button" (click)="nextOnboardingStep()">I'm ready!</button>
+        <div class="onboarding-checkmarks">
+            <div *ngFor="let checkmark of cycleStepBooleans; let i = index">
+                <img *ngIf="i < cycleStep" src="./assets/check-highlighted.png">
+                <img *ngIf="i >= cycleStep" src="./assets/check.png">
+            </div>
         </div>
-        <div id="privacy-policy">privacy policy</div>
+        <div class="next-cycle" (click)="nextCycleStep()">next: goals <ion-icon name="arrow-forward"></ion-icon></div>
+    </div>
+    <div *ngIf="onboardingStep === 4">
+        <img id="cycle" src="./assets/goals.png">
+        <div class="centered onboarding-centered" id="onboarding-3">
+            <div class="fancy-title"></div>
+            <button ion-button color="secondary" class="rosy-button">is your period regular?</button>
+            <button ion-button color="secondary" class="rosy-button">about how many days does it last?</button>
+            <button ion-button color="secondary" class="rosy-button">do you get pms?</button>
+            <button ion-button color="secondary" class="rosy-button">do you use birth control?</button>
+            <button ion-button color="secondary" class="rosy-button">what's your preferred hygiene product?</button>
+            <button ion-button color="secondary" class="rosy-button">any pre-existing conditions?</button>
+        </div>
+        <div class="onboarding-checkmarks">
+            <div *ngFor="let checkmark of cycleStepBooleans; let i = index">
+                <img *ngIf="i < cycleStep" src="./assets/check-highlighted.png">
+                <img *ngIf="i >= cycleStep" src="./assets/check.png">
+            </div>
+        </div>
+        <div class="next-cycle" (click)="nextCycleStep()">next: goals <ion-icon name="arrow-forward"></ion-icon></div>
     </div>
 </ion-content>

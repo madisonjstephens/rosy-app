@@ -12,6 +12,12 @@ export class OnboardingPage {
     private loggedIn: boolean;
     private emailSignup: boolean;
     private onboardingStep: number = 0;
+    private cycleStep = 0;
+    private cycleStepBooleans: boolean[] = [ // I dunno some hacky stuff whatever
+        false,
+        false,
+        false
+    ]
 
     constructor(public navCtrl: NavController) {
 
@@ -29,5 +35,10 @@ export class OnboardingPage {
     
     nextOnboardingStep() {
         this.onboardingStep++;
+    }
+    
+    nextCycleStep() {
+        this.cycleStep++;
+        this.nextOnboardingStep();
     }
 }

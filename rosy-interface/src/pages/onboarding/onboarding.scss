@@ -14,12 +14,13 @@ page-onboarding {
 }
 
 .rosy-button {
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     width: 100%;
     text-align: center;
     border-radius: 0px;
     box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.50);
+    margin: 8px 0;
 }
 
 #signup-buttons > .rosy-button ion-icon {
@@ -108,8 +109,16 @@ page-onboarding {
     top: -10px;
 }
 
+#cycle {
+    position: relative;
+    top: 75px;
+    width: 140px;
+    display: block;
+    margin: 0 auto;
+}
+
 #onboarding-3 {
-    top: 150px;
+    top: 80px;
 }
 
 #onboarding-3 .rosy-button {
@@ -119,4 +128,49 @@ page-onboarding {
 
 #onboarding-3 .button-inner {
     display: inline-block;
+}
+
+.next-cycle {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}
+
+.next-cycle > ion-icon {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.onboarding-checkmarks {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.onboarding-checkmarks div {
+    display: inline-block;
+}
+
+.onboarding-checkmarks img {
+    width: 30px;
+}
+
+#venus {
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 230px;
+}
+
+#onboarding-2 {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+#onboarding-2 .rosy-button {
+    text-align: center;
 }
