@@ -14,6 +14,8 @@ page-onboarding {
 }
 
 .rosy-button {
+    height: 50px;
+    line-height: 50px;
     width: 100%;
     text-align: center;
     border-radius: 0px;
@@ -23,7 +25,6 @@ page-onboarding {
 #signup-buttons > .rosy-button ion-icon {
     position: absolute;
     right: 15px;
-    top: 25%;
     font-size: 25px;
 }
 
@@ -107,6 +108,15 @@ page-onboarding {
     top: -10px;
 }
 
-#onboarding-2 {
+#onboarding-3 {
     top: 150px;
+}
+
+#onboarding-3 .rosy-button {
+    text-align: left;
+    font-size: 15px;
+}
+
+#onboarding-3 .button-inner {
+    display: inline-block;
 }
