@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="27px" height="25px" viewBox="0 0 27 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Facebook-color</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="App" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Welcome-1" transform="translate(-263.000000, -351.000000)" fill="#000000">
+            <g id="FB-Sign-up" filter="url(#filter-1)" transform="translate(60.000000, 342.000000)">
+                <g id="Group" transform="translate(30.000000, 10.000000)">
+                    <path d="M185.994026,19.9473684 L176.136021,19.9473684 C175.50843,19.9473684 175,19.4790493 175,18.9015537 L175,2.04574117 C175,1.46809857 175.50851,1 176.136021,1 L194.447018,1 C195.07437,1 195.58296,1.46809857 195.58296,2.04574117 L195.58296,18.9015537 C195.58296,19.4791228 195.07429,19.9473684 194.447018,19.9473684 L189.201944,19.9473684 L189.201944,12.6099032 L191.877393,12.6099032 L192.278003,9.75036275 L189.201944,9.75036275 L189.201944,7.92472687 C189.201944,7.09682394 189.451687,6.5326354 190.741371,6.5326354 L192.386302,6.53197373 L192.386302,3.97437785 C192.101818,3.93952961 191.12537,3.86167247 189.989348,3.86167247 C187.617712,3.86167247 185.994026,5.19428668 185.994026,7.64152981 L185.994026,9.75036275 L183.311709,9.75036275 L183.311709,12.6099032 L185.994026,12.6099032 L185.994026,19.9473684 L185.994026,19.9473684 Z" id="Facebook"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
