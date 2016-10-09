@@ -23,7 +23,8 @@ import { CrisisPage } from '../pages/crisis/crisis';
     ResourcesPage,
     OnboardingPage,
     NewsPage,
-    RefillPage
+    RefillPage,
+    CrisisPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -39,7 +40,8 @@ import { CrisisPage } from '../pages/crisis/crisis';
     ResourcesPage,
     OnboardingPage,
     NewsPage,
-    RefillPage
+    RefillPage,
+    CrisisPage
   ],
   providers: []
 })
