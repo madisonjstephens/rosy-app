@@ -1,14 +1,25 @@
 <ion-content>
     <img id="smiley" src="./assets/wink.png">
-    <img id="add-new-thing" src="./assets/add-button.png">
+    <img *ngIf="!popup" id="add-new-thing" src="./assets/add-button.png">
     <div class="subheader">hey girl, u ready to slay today?</div>
     <div id="items">
-        <button *ngFor="let item of myList" ion-button color="favorite" class="rosy-button item-button">
-            <div *ngIf="item.icon" class="item-icon">
-                <img src="./assets/{{item.icon}}">
+        <div *ngFor="let item of myList">
+            <button ion-button color="favorite" class="rosy-button item-button" (click)="openPopup(item)">
+                <div *ngIf="item.icon" class="item-icon">
+                    <img src="./assets/{{item.icon}}">
+                </div>
+                <span class="item-text">{{item.text}}</span>
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+            <div class="item-popup" *ngIf="item.popup">
+                <img class="popup-img" src="./assets/{{item.popupImg}}">
+                <div class="popup-header" [innerHtml]="item.popupHeader"></div>
+                <div class="popup-body" [innerHtml]="item.popupBody"></div>
+                <div class="popup-action"><button ion-button color="light" (click)="item.popupAction()">{{item.popupActionText}}</button></div>
             </div>
-            <span class="item-text">{{item.text}}</span>
-            <ion-icon name="arrow-forward"></ion-icon>
-        </button>
+        </div>
+    </div>
+    <div id="pu-bg" *ngIf="popup" (click)="closePopup()">
+        <img id="closepu" src="./assets/exit.png">
     </div>
 </ion-content>

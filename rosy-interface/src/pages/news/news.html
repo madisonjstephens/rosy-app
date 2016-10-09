@@ -1,0 +1,18 @@
+<ion-content>
+    <img id="health-planet" src="./assets/healthplanet.png">
+    <div id="health-message">
+        <div>our bodies in politics & the news</div>
+        <div>{{todayDate}}</div>
+    </div>
+    <div class="health-dropdowns rss-dropdowns">
+        <div *ngFor="let dropdown of feed; let i = index" class="dropdown" [class.middle]="i > 0">
+            <button ion-button color="favorite" class="dropdown-header">
+                <div>
+                    <div>{{dropdown.title}}</div>
+                    <div id="author"><span *ngIf="dropdown.author">{{dropdown.author}}, </span>{{dropdown.articledate}}</div>
+                </div>
+                <ion-icon name="ios-open-outline" (click)="openArticle(dropdown.link)"></ion-icon>
+            </button>
+        </div>
+    </div>
+</ion-content>

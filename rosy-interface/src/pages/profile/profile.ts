@@ -19,6 +19,7 @@ export class ProfilePage {
         },
         {
             title: 'schedule an appointment',
+            open: false
         },
         {
             title: 'get delivery',
@@ -26,8 +27,13 @@ export class ProfilePage {
         {
             title: 'notifications',
         }
-    ]
+    ];
+    
     constructor(public navCtrl: NavController) {
 
+    }
+    
+    toggleDropdown(dropdown) {
+        dropdown.open = !dropdown.open;
     }
 }

@@ -1,9 +1,9 @@
-page-health {
+page-news {
     font-family: karla;
     font-size: 17px;
 }
 
-page-health ion-content {
+page-news ion-content {
     background-image: -webkit-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
     background-image: -o-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
     background-image: linear-gradient(179deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
@@ -34,8 +34,13 @@ page-health ion-content {
     font-family: karla-italic-bold
 }
 
+.rss-dropdowns .dropdown-header {
+    height: 100px;
+    padding-top: 10px;
+}
+
 .dropdown {
-    background: #C6F7EC !important;
+    background: #FADFEC;
 }
 
 .dropdown.middle {
@@ -60,4 +65,19 @@ page-health ion-content {
     position: absolute;
     right: 10px;
     top: 1px;
+}
+
+.rss-dropdown .dropdown-header .button-inner > div {
+    width: 90%;
+    display: inline-block;
+    white-space: normal;
+    line-height: 20px;
+}
+
+#author {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: rgba(0,0,0,0.5);
+    font-size: 12px;
 }

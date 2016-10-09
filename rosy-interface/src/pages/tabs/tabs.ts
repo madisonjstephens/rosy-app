@@ -4,6 +4,7 @@ import { HomePage } from '../home/home';
 import { HealthPage } from '../health/health';
 import { CyclePage } from '../cycle/cycle';
 import { ProfilePage } from '../profile/profile';
+import { ResourcesPage } from '../resources/resources';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -29,7 +30,7 @@ export class TabsPage {
         },
         {
             text: 'resources',
-            component: ProfilePage,
+            component: ResourcesPage,
             icon: 'bk',
         },
         {

@@ -1,0 +1,10 @@
+<ion-content>
+    <img id="rsrcs" src="./assets/rsrcs.png">
+    <div *ngFor="let bubble of bubbles; let i = index" id="bubbles">
+        <img class="bubble" [class.left-bubble]="i%2===0" [class.right-bubble]="(i+1)%2===0" src="./assets/{{bubble.src}}" (click)="gotoPage(bubble.page)">
+    </div>
+    <div id="fksearch">
+        <ion-icon name="search"></ion-icon>
+        <div class="search-input"><ion-input type="text" [(ngModel)]="search" placeholder="search"></ion-input></div>
+    </div>
+</ion-content>

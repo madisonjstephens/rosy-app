@@ -8,7 +8,11 @@
     <img id="medstarright" src="./assets/medstarright.png">
     <div class="health-dropdowns" id="prof-dd">
         <div *ngFor="let dropdown of dropdowns; let i = index" class="dropdown" [class.middle]="i > 0">
-            <button ion-button color="favorite" class="dropdown-header">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
+            <button ion-button color="favorite" class="dropdown-header" (click)="toggleDropdown(dropdown)">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
+            <div class="dd-body" *ngIf="dropdown.open && i === 3">
+                <div class="apt-input">email<ion-input type="text" [(ngModel)]="email" placeholder="your email address"></ion-input></div>
+                <div class="login-input">password<ion-input id="password" type="password" [(ngModel)]="password" placeholder="make it tough!"></ion-input></div>
+            </div>
         </div>
     </div>
 </ion-content>

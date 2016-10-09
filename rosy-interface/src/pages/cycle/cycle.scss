@@ -42,6 +42,45 @@ page-cycle ion-content {
     right: 5px;
 }
 
+.squareNum > span {
+    z-index: 9999 !important;
+}
+
+.squareNum.ovulate {
+    border: 1px solid #C6F7EC;
+    padding: 0px 3px;
+    border-radius: 20px;
+    background: #C6F7EC;
+}
+
+.squareNum.periodstart {
+    border: 1px solid lightcoral;
+    padding: 0px 3px;
+    padding-right: 7px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: lightcoral;
+    right: -2px;
+}
+
+.squareNum.period {
+    border: 1px solid lightcoral;
+    padding: 0px 3px;
+    background: lightcoral;
+    padding-left: 33px;
+    padding-right: 7px;
+    right: -1px;
+}
+
+.squareNum.periodend {
+    border: 1px solid lightcoral;
+    padding: 0px 3px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 30px;
+    background: lightcoral;
+}
+
 #cycle-dd {
     margin-top: 0;
     margin-bottom: 50px;

@@ -1,0 +1,76 @@
+page-resources {
+    font-family: karla;
+    font-size: 17px;
+}
+
+page-resources ion-content {
+    background-image: -webkit-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+    background-image: -o-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+    background-image: linear-gradient(179deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+}
+
+#rsrcs {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+#bubbles {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.bubble {
+    height: 65px;
+    margin-bottom: 7px;
+}
+
+.left-bubble {
+    float: left;
+}
+
+.right-bubble {
+    float: right;
+}
+
+#fksearch {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    height: 50px;
+    background: #9CF1DC;
+    line-height: 50px;
+    padding-left: 10px;
+    color: #FFF;
+    font-size: 23px;
+}
+
+#fksearch > .search-input {
+    display: inline-block;
+    float: right;
+    width: 330px;
+}
+
+#fksearch > .search-input input {
+    margin: 0;
+    padding-left: 15px;
+    color: #FFF !important;
+    border: 3px solid #FFF;
+    border-radius: 12px;
+    height: 30px;
+}
+
+#fksearch > .search-input input::-webkit-input-placeholder {
+    color: #FFF !important;
+}
+#fksearch > .search-input input::-moz-placeholder {
+    color: #FFF !important;
+}
+#fksearch > .search-input input:-ms-input-placeholder {
+    color: #FFF !important;
+}
+#fksearch > .search-input input:-moz-placeholder {
+    color: #FFF !important;
+}

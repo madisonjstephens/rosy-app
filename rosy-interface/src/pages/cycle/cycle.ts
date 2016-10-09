@@ -7,6 +7,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'cycle.html'
 })
 export class CyclePage {
+    private randPeriod;
     private dropdowns: any[] = [
         {
             title: 'history',
@@ -18,6 +19,7 @@ export class CyclePage {
     private calendarSquares: any[] = [];
 
     constructor(public navCtrl: NavController) {
+        this.setRandPeriod();
         this.setCalendar();
     }
     
@@ -52,5 +54,9 @@ export class CyclePage {
         let today = new Date();
         let d = new Date(today.getFullYear(), today.getMonth()+1, 0);
         return d.getDate();
+    }
+    
+    setRandPeriod() {
+        this.randPeriod = Math.floor(Math.random() * this.monthLength)+1;
     }
 }
