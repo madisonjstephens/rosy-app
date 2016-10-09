@@ -15,27 +15,27 @@ export class TabsPage {
         {
             text: 'my list',
             component: HomePage,
-            icon: '',
+            icon: 'chk',
         },
         {
             text: 'health',
             component: HealthPage,
-            icon: '',
+            icon: 'chr',
         },
         {
             text: 'cycle',
             component: CyclePage,
-            icon: '',
+            icon: 'cal',
         },
         {
             text: 'resources',
             component: ProfilePage,
-            icon: '',
+            icon: 'bk',
         },
         {
             text: 'profile',
             component: ProfilePage,
-            icon: '',
+            icon: 'alienhead',
         }
     ];
 }

@@ -1,9 +1,5 @@
-.tab-button {
-    background: rgba(85, 85, 86, 0.87) !important;
-}
-
-.tab-button[aria-selected="true"] {
-    color: #FFF;
+.tab-button[aria-selected="true"] > .tab-button-text {
+    color: #A3F0DF !important;
 }
 
 .tab-button-text {
@@ -11,6 +7,121 @@
     color: #FFF !important;
 }
 
+.tab-button-icon {
+    min-width: 0 !important;
+}
+
 .tabbar {
-    
+    background: rgba(85, 85, 86, 0.87) !important;
+    border-top: 1px solid black !important;
+}
+
+.scroll-content {
+    height: 100%;
+}
+
+.highlighted-img {
+    display: none;
+}
+
+.tab-button img {
+    width: 20px;
+}
+
+.tab-button[aria-selected="true"] .nonh-img {
+    display: none;
+}
+
+.tab-button[aria-selected="true"] .highlighted-img {
+    display: block;
+}
+
+.ion-ios-alienhead-outline,
+.ion-md-alienhead-outline {
+  content: url(../../assets/alienhead.png);
+  width: 27px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-alienhead,
+.ion-md-alienhead {
+  content: url(../../assets/alienheadH.png);
+  width: 27px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-bk-outline,
+.ion-md-bk-outline {
+  content: url(../../assets/book.png);
+  width: 30px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-bk,
+.ion-md-bk {
+  content: url(../../assets/bookH.png);
+  width: 30px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-chr-outline,
+.ion-md-chr-outline {
+  content: url(../../assets/chr.png);
+  width: 30px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-chr,
+.ion-md-chr {
+  content: url(../../assets/chrH.png);
+  width: 30px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-cal-outline,
+.ion-md-cal-outline {
+  content: url(../../assets/cal.png);
+  width: 30px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-cal,
+.ion-md-cal {
+  content: url(../../assets/calH.png);
+  width: 30px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-chk-outline,
+.ion-md-chk-outline {
+  content: url(../../assets/chk.png);
+  width: 30px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-chk,
+.ion-md-chk {
+  content: url(../../assets/chkH.png);
+  width: 30px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
 }
