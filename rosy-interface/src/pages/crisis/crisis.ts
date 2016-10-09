@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { CallNumber } from 'ionic-native';
 
 @Component({
   selector: 'page-crisis',
@@ -9,19 +10,22 @@ import { NavController } from 'ionic-angular';
 export class CrisisPage {
     private dropdowns: any[] = [
         {
-            title: 'mood',
+            title: 'sexual assault',
         },
         {
-            title: 'body',
+            title: 'unprotected sex',
         },
         {
-            title: 'skin',
+            title: 'domestic abuse',
         },
         {
-            title: 'mind',
+            title: 'mental health',
         },
         {
-            title: 'activity',
+            title: 'sexual harassment',
+        },
+        {
+            title: 'STIs',
         }
     ]
 
@@ -50,5 +54,11 @@ export class CrisisPage {
         } else {
             return 'th';
         }
+    }
+    
+    callForHelp() {
+        CallNumber.callNumber('13473661509', false)
+            .then(() => console.log('Launched dialer!'))
+            .catch(() => console.log('Error!!! :('));
     }
 }

@@ -18,16 +18,37 @@ page-refill ion-content {
 #strz {
     position: absolute;
     top: 40px;
-    left: 160px;
+    left: 155px;
 }
 
 #pgncy {
     position: absolute;
     top: 45px;
-    left: 295px;
+    left: 290px;
 }
 
 #health-message.refill-message {
     margin-top: 150px;
     margin-bottom: 15px;
+}
+
+.apt-input-select {
+    background: rgba(255,255,255,0.7);
+    margin-bottom: 5px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 17px;
+    padding-left: 10px;
+    position: relative;
+    margin: 0;
+}
+
+.apt-input-select ion-select {
+    background: none;
+    float: right;
+}
+
+.apt-input-select .select-text {
+    position: relative;
+    line-height: 17px;
 }

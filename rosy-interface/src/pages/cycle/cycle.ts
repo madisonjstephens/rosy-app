@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { events, DIARY } from '../../shared/constants/constants';
 
 @Component({
   selector: 'page-cycle',
@@ -16,40 +17,12 @@ export class CyclePage {
             title: 'tracking diary',
         }
     ]
-    private calendarSquares: any[] = [];
-    private diary: any[] = [
-        {
-            ovulation: '2016-09-09',
-            start: '2016-09-11',
-            end: '2016-09-18'
-        },
-        {
-            ovulation: '2016-08-09',
-            start: '2016-08-12',
-            end: '2016-08-19'
-        },
-        {
-            ovulation: '2016-07-08',
-            start: '2016-07-10',
-            end: '2016-07-18'
-        },
-        {
-            ovulation: '2016-06-08',
-            start: '2016-06-09',
-            end: '2016-06-17'
-        },
-        {
-            ovulation: '2016-05-07',
-            start: '2016-05-10',
-            end: '2016-05-18'
-        },
-        {
-            ovulation: '2016-04-09',
-            start: '2016-04-11',
-            end: '2016-04-18'
-        },
+    private dates: any[] = [
+        
     ];
-
+    private calendarSquares: any[] = [];
+    private diary = DIARY;
+    
     constructor(public navCtrl: NavController) {
         this.setRandPeriod();
         this.setCalendar();
@@ -89,10 +62,15 @@ export class CyclePage {
     }
     
     setRandPeriod() {
-        this.randPeriod = Math.floor(Math.random() * 13)+1;
+        this.randPeriod = Math.floor(Math.random() * 4)+10;
     }
     
     toggleDropdown(dropdown) {
         dropdown.open = !dropdown.open;
     }
+    
+    dayIsEvent(day) {
+        return events.some((elem) => elem === day);
+    }
 }
+

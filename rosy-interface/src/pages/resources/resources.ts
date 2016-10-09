@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { NewsPage } from '../news/news';
+import { CrisisPage } from '../crisis/crisis';
 
 @Component({
   selector: 'page-resources',
@@ -27,6 +28,7 @@ export class ResourcesPage {
         },
         {
             src: 'b6.png',
+            page: CrisisPage
         }
     ]
 

@@ -129,7 +129,7 @@ page-profile ion-content {
 }
 
 #docemail {
-    width: 150px;
+    width: 175px;
 }
 
 #aptdate {
@@ -157,4 +157,16 @@ page-profile ion-content {
     font-size: 17px;
     padding: 1px 10px;
     position: relative;
+}
+
+#body-cover {
+    width: 100% !important;
+    height: 410px !important;
+    position: absolute;
+    left: 0;
+    background: #C6F7EC;
+    opacity: 0.8;
+    z-index: 999999999;
+    text-align: center;
+    padding-top: 47%;
 }

@@ -1,9 +1,9 @@
-page-health {
+page-crisis {
     font-family: karla;
     font-size: 17px;
 }
 
-page-health ion-content {
+page-crisis ion-content {
     background-image: -webkit-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
     background-image: -o-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
     background-image: linear-gradient(179deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
@@ -60,4 +60,15 @@ page-health ion-content {
     position: absolute;
     right: 10px;
     top: 1px;
+}
+
+#alnhg {
+    width: 267px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: block;
+}
+
+#health-message.not-alone {
+    margin-top: 10px !important;
 }

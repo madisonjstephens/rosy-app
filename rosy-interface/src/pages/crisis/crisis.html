@@ -1,6 +1,6 @@
 <ion-content>
-    <img id="health-planet" src="./assets/healthplanet.png">
-    <div id="health-message">
+    <img id="alnhg" src="./assets/alienheading.png">
+    <div id="health-message" class="not-alone">
         <span>you're not alone!<br>we're here for you, 24/7</span>
     </div>
     <div class="health-dropdowns">
@@ -8,6 +8,5 @@
             <button ion-button color="favorite" class="dropdown-header">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
         </div>
     </div>
-    <div class="add-new"><ion-icon name="add"></ion-icon> write a journal entry</div>
-    <div class="add-new"><ion-icon name="camera"></ion-icon> add to photo diary</div>
+    <div class="add-new" (click)="callForHelp()"><ion-icon name="call"></ion-icon> want to talk? give us a call</div>
 </ion-content>

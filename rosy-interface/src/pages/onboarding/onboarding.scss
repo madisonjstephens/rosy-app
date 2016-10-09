@@ -22,6 +22,7 @@ page-onboarding {
     border-radius: 0px;
     box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.50);
     margin: 8px 0;
+    padding-left: 10px;
 }
 
 #signup-buttons > .rosy-button ion-icon {
@@ -58,6 +59,7 @@ page-onboarding {
 
 .login-input > ion-input > input {
     padding-right: 0 !important;
+    text-align: right;
 }
 
 #password {
@@ -256,4 +258,10 @@ page-onboarding {
 
 #account-checkmarks {
     margin-top: -40px !important;
+}
+
+.dashes {
+    position: absolute;
+    right: 8px;
+    transform: scale(1.4);
 }

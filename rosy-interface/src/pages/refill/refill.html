@@ -6,4 +6,12 @@
         <span>prescription refills, made simple</span>
     </div>
     <div class="apt-input" (click)="scanBarcode()">tap here to scan <ion-input type="text" [(ngModel)]="barcode" placeholder="it's easy!'" readonly></ion-input></div>
+    <div class="apt-input-select">
+        gaming
+        <ion-select class="apt-input-select" [(ngModel)]="pharmacy" placeholder="pharmacy">
+            <ion-option value="riteaid">RiteAid</ion-option>
+            <ion-option value="cvs">CVS</ion-option>
+            <ion-option value="walgreens">Walgreens</ion-option>
+        </ion-select>
+    </div>
 </ion-content>

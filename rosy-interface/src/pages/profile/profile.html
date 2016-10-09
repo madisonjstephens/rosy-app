@@ -10,6 +10,9 @@
         <div *ngFor="let dropdown of dropdowns; let i = index" class="dropdown" [class.middle]="i > 0">
             <button ion-button color="favorite" [class.open]="dropdown.open && i === 3" class="dropdown-header" (click)="toggleDropdown(dropdown)">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
             <div class="dd-body" [class.open]="dropdown.open && i === 3">
+                <div *ngIf="sendingEmail && i === 3" id="body-cover">
+                    <ion-spinner></ion-spinner>
+                </div>
                 <div class="apt-input">doc's name<ion-input type="text" [(ngModel)]="name" placeholder="mark greene, like last time?"></ion-input></div>
                 <div class="apt-input">doc office email<ion-input id="docemail" type="email" [(ngModel)]="email" placeholder="we'll contact them"></ion-input></div>
                 <div class="apt-input">when?<ion-datetime id="aptdate" type="date" [(ngModel)]="date"></ion-datetime><span id="date-cal" *ngIf="!date">pick a date</span></div>

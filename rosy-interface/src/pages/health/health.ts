@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { CameraPreview, CameraPreviewRect} from 'ionic-native';
 
 @Component({
   selector: 'page-health',
@@ -28,6 +29,16 @@ export class HealthPage {
     constructor(public navCtrl: NavController) {
 
     }
+    
+    ngOnInit() {
+        try {
+            CameraPreview.setOnPictureTakenHandler().subscribe((result) => {
+                console.log(result);
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    }
    
     get todayDate() {
         let days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
@@ -50,5 +61,34 @@ export class HealthPage {
         } else {
             return 'th';
         }
+    }
+    
+    openCamera() {
+        let cameraRect: CameraPreviewRect = {
+            x: 100,
+            y: 100,
+            width: 200,
+            height: 200
+        };
+        
+        CameraPreview.startCamera(
+            cameraRect,
+            'front',
+            true,
+            false,
+            true,
+            1
+        );
+    }
+    
+    closeCamera() {
+        CameraPreview.stopCamera();
+    }
+    
+    takePicture() {
+        CameraPreview.takePicture({
+            maxWidth: 640,
+            maxHeight: 640
+        });
     }
 }

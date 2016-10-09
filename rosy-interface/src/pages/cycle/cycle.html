@@ -5,6 +5,7 @@
     </div>
     <div id="calendar">
         <div *ngFor="let square of calendarSquares" class="calendar-square">
+            <span class="squareIcon" *ngIf="dayIsEvent(square.num)"><ion-icon name="medkit"></ion-icon></span>
             <span class="squareNum" [class.ovulate]="square.num === randPeriod" [class.periodstart]="square.num === randPeriod + 2" [class.period]="square.num > randPeriod + 2 && square.num < randPeriod + 7" [class.periodend]="square.num === randPeriod + 7"><span *ngIf="square.num">{{square.num}}</span></span>
         </div>
     </div>
