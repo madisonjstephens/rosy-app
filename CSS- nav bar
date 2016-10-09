@@ -1,0 +1,15 @@
+/* Nav Bar: */
+background: rgba(85,85,86,0.87);
+
+/* Vector: */
+border: 1px solid #000000;
+
+/* nav text: */
+font-family: Karla-Regular;
+font-size: 11px;
+color: #FFFFFF;
+
+/* highlighted nav text: */
+font-family: Karla-Regular;
+font-size: 11px;
+color: #A3F0DF;
