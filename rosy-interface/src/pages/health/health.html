@@ -4,11 +4,11 @@
         <div>{{todayDate}}</div>
         <span>are you feeling stellar, or out of orbit?</span>
     </div>
-    <div id="health-dropdowns">
+    <div class="health-dropdowns">
         <div *ngFor="let dropdown of dropdowns; let i = index" class="dropdown" [class.middle]="i > 0">
             <button ion-button color="favorite" class="dropdown-header">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
         </div>
     </div>
-    <div class="add-new"><ion-icon name="create"></ion-icon> write a journal entry</div>
+    <div class="add-new"><ion-icon name="add"></ion-icon> write a journal entry</div>
     <div class="add-new"><ion-icon name="camera"></ion-icon> add to photo diary</div>
 </ion-content>

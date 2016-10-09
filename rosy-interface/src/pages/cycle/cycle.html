@@ -8,4 +8,9 @@
             <span class="squareNum" *ngIf="square.num">{{square.num}}</span>
         </div>
     </div>
+    <div class="health-dropdowns" id="cycle-dd">
+        <div *ngFor="let dropdown of dropdowns; let i = index" class="dropdown" [class.middle]="i > 0">
+            <button ion-button color="favorite" class="dropdown-header">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
+        </div>
+    </div>
 </ion-content>

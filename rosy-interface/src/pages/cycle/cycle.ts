@@ -7,6 +7,14 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'cycle.html'
 })
 export class CyclePage {
+    private dropdowns: any[] = [
+        {
+            title: 'history',
+        },
+        {
+            title: 'tracking diary',
+        }
+    ]
     private calendarSquares: any[] = [];
 
     constructor(public navCtrl: NavController) {
