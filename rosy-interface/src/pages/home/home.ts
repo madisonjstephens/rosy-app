@@ -11,10 +11,10 @@ import 'rxjs/add/operator/map';
   templateUrl: 'home.html'
 })
 export class HomePage {
-    private popup: any;
-    private todo: any;
-    private task: any;
-    private myList: any[] = [
+    popup: any;
+    todo: any;
+    task: any;
+    myList: any[] = [
         {
             icon: "lightning.png",
             text: "don't forget! pill at 12:30",
@@ -68,7 +68,7 @@ export class HomePage {
     ]
 
     constructor(public navCtrl: NavController,
-                private http: Http) {
+                public http: Http) {
     
     }
     

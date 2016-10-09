@@ -8,7 +8,7 @@ import { CameraPreview, CameraPreviewRect} from 'ionic-native';
   templateUrl: 'health.html'
 })
 export class HealthPage {
-    private dropdowns: any[] = [
+    dropdowns: any[] = [
         {
             title: 'mood',
         },

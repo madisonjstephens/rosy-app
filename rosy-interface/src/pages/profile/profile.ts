@@ -10,15 +10,15 @@ import { events, DIARY } from '../../shared/constants/constants';
   templateUrl: 'profile.html'
 })
 export class ProfilePage {
-    private userName = ''
-    private name;
-    private email;
-    private wh;
-    private journal;
-    private date;
-    private xtra;
-    private sendingEmail: boolean;
-    private dropdowns: any[] = [
+    userName = ''
+    name;
+    email;
+    wh;
+    journal;
+    date;
+    xtra;
+    sendingEmail: boolean;
+    dropdowns: any[] = [
         {
             title: 'profile settings',
         },

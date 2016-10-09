@@ -9,9 +9,9 @@ import { BarcodeScanner } from 'ionic-native';
   templateUrl: 'refill.html'
 })
 export class RefillPage {
-    private barcode: any;
+    barcode: any;
     constructor(public navCtrl: NavController,
-                private http: Http) {
+                public http: Http) {
 
     }
     

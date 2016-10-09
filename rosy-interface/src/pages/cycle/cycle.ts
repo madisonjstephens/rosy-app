@@ -8,8 +8,8 @@ import { events, DIARY } from '../../shared/constants/constants';
   templateUrl: 'cycle.html'
 })
 export class CyclePage {
-    private randPeriod;
-    private dropdowns: any[] = [
+    randPeriod;
+    dropdowns: any[] = [
         {
             title: 'history',
         },
@@ -17,11 +17,11 @@ export class CyclePage {
             title: 'tracking diary',
         }
     ]
-    private dates: any[] = [
+    dates: any[] = [
         
     ];
-    private calendarSquares: any[] = [];
-    private diary = DIARY;
+    calendarSquares: any[] = [];
+    diary = DIARY;
     
     constructor(public navCtrl: NavController) {
         this.setRandPeriod();

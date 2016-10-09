@@ -7,12 +7,12 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'news.html'
 })
 export class NewsPage {
-    private feeds = [
+    feeds = [
         "http://ejw.sagepub.com/rss/recent.xml",
         "http://feeds.feedburner.com/FeministDailyNews",
         "http://rss.medicalnewstoday.com/womens_health-obgyn.xml"
     ];
-    private feed: any[] = [];
+    feed: any[] = [];
 
     constructor(public navCtrl: NavController) {
         

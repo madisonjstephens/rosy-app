@@ -12,7 +12,7 @@ import { ResourcesPage } from '../resources/resources';
 export class TabsPage {
     // this tells the tabs component which Pages
     // should be each tab's root Page
-    private tabs: any[] = [
+    tabs: any[] = [
         {
             text: 'my list',
             component: HomePage,

@@ -9,7 +9,7 @@ import { CrisisPage } from '../crisis/crisis';
   templateUrl: 'resources.html'
 })
 export class ResourcesPage {
-    private bubbles: any[] = [
+    bubbles: any[] = [
         {
             src: 'b1.png',
         },

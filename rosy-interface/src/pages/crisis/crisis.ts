@@ -8,7 +8,7 @@ import { CallNumber } from 'ionic-native';
   templateUrl: 'crisis.html'
 })
 export class CrisisPage {
-    private dropdowns: any[] = [
+    dropdowns: any[] = [
         {
             title: 'sexual assault',
         },

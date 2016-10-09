@@ -9,17 +9,17 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'onboarding.html'
 })
 export class OnboardingPage {
-    private loggingIn: boolean;
-    private loggedIn: boolean;
-    private emailSignup: boolean;
-    private onboardingStep: number = 0;
-    private cycleStep = 0;
-    private cycleStepBooleans: boolean[] = [ // I dunno some hacky stuff whatever
+    loggingIn: boolean;
+    loggedIn: boolean;
+    emailSignup: boolean;
+    onboardingStep: number = 0;
+    cycleStep = 0;
+    cycleStepBooleans: boolean[] = [ // I dunno some hacky stuff whatever
         false,
         false,
         false
     ]
-    private goalImages: any[] = [
+    goalImages: any[] = [
         {
             src: 'streamline.png',
             text: 'streamline routine',
