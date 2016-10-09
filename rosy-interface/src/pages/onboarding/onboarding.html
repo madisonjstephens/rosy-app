@@ -11,9 +11,9 @@
     <div *ngIf="emailSignup && !loggedIn">
         <img id="logo" src="./assets/logo.png">
         <div id="email-signup">
-            <div class="login-input">email<ion-input type="text" [(ngModel)]="email"></ion-input></div>
-            <div class="login-input">password<ion-input type="password" [(ngModel)]="password"></ion-input></div>
-            <button ion-button color="secondary" class="rosy-button" (click)="signupByEmail(email, password)">get #rosy</button>
+            <div class="login-input">email<ion-input type="text" [(ngModel)]="email" placeholder="your email address"></ion-input></div>
+            <div class="login-input">password<ion-input id="password" type="password" [(ngModel)]="password" placeholder="make it tough!"></ion-input></div>
+            <button ion-button color="secondary" class="rosy-button" (click)="signupByEmail(email, password)">get #rosy!</button>
         </div>
     </div>
     <div *ngIf="onboardingStep === 1">
@@ -52,7 +52,7 @@
             <button ion-button color="secondary" class="rosy-button">what's your preferred hygiene product?</button>
             <button ion-button color="secondary" class="rosy-button">any pre-existing conditions?</button>
         </div>
-        <div class="onboarding-checkmarks">
+        <div class="onboarding-checkmarks" id="cycle-checkmarks">
             <div *ngFor="let checkmark of cycleStepBooleans; let i = index">
                 <img *ngIf="i < cycleStep" src="./assets/check-highlighted.png">
                 <img *ngIf="i >= cycleStep" src="./assets/check.png">
@@ -65,18 +65,39 @@
         <div class="centered onboarding-centered" id="onboarding-4">
             <div class="fancy-title"></div>
             <div id="goal-images">
-                <div *ngFor="let image of goalImages; let i = index" [class.wider-goal]="((i+1)%3 === 0)">
-                    <img style="width: {{image.width}}" src="./assets/{{image.src}}">
-                    <div>{{image.text}}</div>
+                <div *ngFor="let image of goalImages; let i = index" [class.wider-goal]="((i+1)%3 === 0)" (click)="highlight(image)">
+                    <div class="goal-img-container">
+                        <img [width]="image.width" src="./assets/{{image.src}}">
+                    </div>
+                    <div [class.selected]="image.selected">{{image.text}}</div>
                 </div>
             </div>
         </div>
-        <div class="onboarding-checkmarks">
+        <div class="onboarding-checkmarks" id="goal-checkmarks">
             <div *ngFor="let checkmark of cycleStepBooleans; let i = index">
                 <img *ngIf="i < cycleStep" src="./assets/check-highlighted.png">
                 <img *ngIf="i >= cycleStep" src="./assets/check.png">
             </div>
         </div>
-        <div class="next-cycle" (click)="nextCycleStep()">next: goals <ion-icon name="arrow-forward"></ion-icon></div>
+        <div class="next-cycle" (click)="nextCycleStep()">next: account <ion-icon name="arrow-forward"></ion-icon></div>
+    </div>
+    <div *ngIf="onboardingStep === 5">
+        <img id="account" src="./assets/account.png">
+        <div class="centered onboarding-centered" id="onboarding-5">
+            <div class="fancy-title"></div>
+            <button ion-button color="secondary" class="rosy-button">name</button>
+            <button ion-button color="secondary" class="rosy-button">birthday</button>
+            <button ion-button color="secondary" class="rosy-button">what are your pronouns?</button>
+            <button ion-button color="secondary" class="rosy-button">sync with your calendar?</button>
+            <div class="add-new" id="avatar"><ion-icon name="camera"></ion-icon> add an avatar</div>
+            <div class="add-new" id="prescriptions"><ion-icon name="barcode"></ion-icon> scan prescriptions</div>
+        </div>
+        <div class="onboarding-checkmarks" id="account-checkmarks">
+            <div *ngFor="let checkmark of cycleStepBooleans; let i = index">
+                <img *ngIf="i < cycleStep" src="./assets/check-highlighted.png">
+                <img *ngIf="i >= cycleStep" src="./assets/check.png">
+            </div>
+        </div>
+        <div class="next-cycle" (click)="nextCycleStep()">let's get #rosy! <ion-icon name="arrow-forward"></ion-icon></div>
     </div>
 </ion-content>

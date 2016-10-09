@@ -1,0 +1,11 @@
+<ion-content>
+    <img id="cycle-header" src="./assets/cycle-header.png">
+    <div id="cycle-message">
+        <div>{{monthYear}}</div>
+    </div>
+    <div id="calendar">
+        <div *ngFor="let square of calendarSquares" class="calendar-square">
+            <span class="squareNum" *ngIf="square.num">{{square.num}}</span>
+        </div>
+    </div>
+</ion-content>

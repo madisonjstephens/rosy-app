@@ -1,3 +1,47 @@
 page-home {
+    font-family: karla;
+    font-size: 17px;
+}
 
+page-home ion-content {
+    background: #FADFEC !important;
+}
+
+#items {
+    margin: 0 auto;
+    width: 95%;
+    margin-top: 120px;
+}
+
+.item-button {
+    background: #9CF1DC;
+    color: #000;
+    text-align: left !important;
+}
+
+.item-button ion-icon {
+    position: absolute;
+    right: 10px;
+    top: 1px;
+}
+
+.item-button .button-inner {
+    display: inline-block;
+}
+
+.item-icon {
+    display: inline-block;
+    width: 40px;
+}
+
+.item-icon > img {
+    margin: 0 auto;
+    height: 30px;
+    vertical-align: middle;
+}
+
+#smiley {
+    width: 300px;
+    position: absolute;
+    left: 50px;
 }

@@ -1,0 +1,41 @@
+page-cycle {
+    font-family: karla;
+    font-size: 17px;
+}
+
+page-cycle ion-content {
+    background: #FADFEC !important;
+}
+
+#cycle-message {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 5px 0px;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+    border-top: 3px solid #FFF;
+    border-bottom: 3px solid #FFF;
+}
+
+#calendar {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.calendar-square {
+    width: 13.5vw;
+    height: 13.5vw;
+    background: #FFF;
+    margin-bottom: 3px;
+    position: relative;
+}
+
+.squareNum {
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+}

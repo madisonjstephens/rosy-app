@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { DataService } from '../../shared/index';
+import { TabsPage } from '../tabs/tabs';
 
 @Component({
   selector: 'page-onboarding',
@@ -23,49 +24,49 @@ export class OnboardingPage {
             src: 'streamline.png',
             text: 'streamline routine',
             selected: false,
-            width: '50px'
-        },
-        {
-            src: 'exercise.png',
-            text: 'exercise',
-            selected: false,
-            width: '50px'
-        },
-        {
-            src: 'pregnancy.png',
-            text: 'pregnancy',
-            selected: false,
-            width: '50px'
-        },
-        {
-            src: 'stress.png',
-            text: 'stress relief',
-            selected: false,
-            width: '50px'
-        },
-        {
-            src: 'balance.png',
-            text: 'balance',
-            selected: false,
-            width: '50px'
+            width: 50
         },
         {
             src: 'health.png',
             text: 'health tracking',
             selected: false,
-            width: '50px'
+            width: 37
+        },
+        {
+            src: 'stress.png',
+            text: 'stress relief',
+            selected: false,
+            width: 36
+        },
+        {
+            src: 'exercise.png',
+            text: 'exercise',
+            selected: false,
+            width: 51
         },
         {
             src: 'nutrition.png',
             text: 'nutrition',
             selected: false,
-            width: '50px'
+            width: 37
+        },
+        {
+            src: 'balance.png',
+            text: 'balance',
+            selected: false,
+            width: 36
+        },
+        {
+            src: 'pregnancy.png',
+            text: 'pregnancy',
+            selected: false,
+            width: 19
         },
         {
             src: 'clarity.png',
             text: 'clarity',
             selected: false,
-            width: '50px'
+            width: 36
         }
     ]
 
@@ -85,10 +86,17 @@ export class OnboardingPage {
     
     nextOnboardingStep() {
         this.onboardingStep++;
+        if (this.onboardingStep > 5) {
+            this.navCtrl.push(TabsPage);
+        }
     }
     
     nextCycleStep() {
         this.cycleStep++;
         this.nextOnboardingStep();
+    }
+    
+    highlight(image: any) {
+        image.selected = !image.selected;
     }
 }

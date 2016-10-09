@@ -4,6 +4,7 @@ page-onboarding {
 
 #logo {
     margin-top: 10%;
+    margin-left: 10px;
 }
 
 #signup-buttons {
@@ -37,20 +38,30 @@ page-onboarding {
 #email-signup {
     width: 75%;
     margin: 0 auto;
+    margin-top: -80px;
 }
 
 .login-input {
-    background: #FFF;
-    opacity: 0.7;
+    background: rgba(255,255,255,0.7);
     margin-bottom: 5px;
     height: 45px;
     line-height: 45px;
-    font-size: 16px;
+    font-size: 17px;
+    padding-left: 10px;
 }
 
 .login-input > ion-input {
-    width: 70%;
-    position: absolute;
+    line-height: 0;
+    width: 160px;
+    float: right;
+}
+
+.login-input > ion-input > input {
+    padding-right: 0 !important;
+}
+
+#password {
+    width: 120px;
 }
 
 .centered {
@@ -123,7 +134,7 @@ page-onboarding {
 
 #onboarding-3 .rosy-button {
     text-align: left;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 #onboarding-3 .button-inner {
@@ -176,15 +187,73 @@ page-onboarding {
 }
 
 #onboarding-4 {
+    width: 95%;
     margin-top: 170px;
 }
 
 #goal-images {
     display: inline-flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+#goal-images > div {
+    width: 30%;
+    font-size: 17px;
+}
+
+#goal-images .selected {
+    text-shadow: -3px 0 #FADFEC, 0 3px #FADFEC,
+      3px 0 #FADFEC, 0 -3px #FADFEC;
 }
 
 .wider-goal {
     width: 100% !important;
+}
+
+.goal-img-container {
+    height: 40px;
+}
+
+#goal-checkmarks {
+    margin-top: -50px !important;
+}
+
+#onboarding-5 {
+    margin-top: 190px;
+}
+
+#account {
+    position: relative;
+    top: 80px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+#onboarding-5 .rosy-button {
+    text-align: left !important;
+    font-size: 17px;
+}
+
+#onboarding-5 .button-inner {
+    display: inline-block;
+}
+
+.add-new ion-icon {
+    font-size: 30px;
+    position: relative;
+    top: 7px;
+    margin-left: 10px;
+    width: 30px;
+}
+
+.add-new {
+    text-align: left;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+#account-checkmarks {
+    margin-top: -40px !important;
 }
