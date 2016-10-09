@@ -73,6 +73,18 @@ page-home ion-content {
     background: #C6F7EC;
     border: 2px solid #FFF;
     border-radius: 2px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease;                  
+    -moz-transition: all 0.5s ease;                 
+    -o-transition: all 0.5s ease;   
+    -ms-transition: all 0.5s ease;          
+    transition: all 0.5s ease;
+}
+
+.item-popup.open {
+    opacity: 1;
+    visibility: visible;
 }
 
 #pu-bg {
@@ -82,7 +94,18 @@ page-home ion-content {
     width: 100vw;
     height: 100vh;
     background: #FADFEC;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease;                  
+    -moz-transition: all 0.5s ease;                 
+    -o-transition: all 0.5s ease;   
+    -ms-transition: all 0.5s ease;          
+    transition: all 0.5s ease;
+}
+
+#pu-bg.open {
     opacity: 0.9;
+    visibility: visible;
 }
 
 .popup-header {

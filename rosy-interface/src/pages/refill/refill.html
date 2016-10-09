@@ -1,0 +1,9 @@
+<ion-content>
+    <img id="apple" src="./assets/nutrition.png">
+    <img id="strz" src="./assets/stress.png">
+    <img id="pgncy" src="./assets/pregnancy.png">    
+    <div id="health-message" class="refill-message">
+        <span>prescription refills, made simple</span>
+    </div>
+    <div class="apt-input" (click)="scanBarcode()">tap here to scan <ion-input type="text" [(ngModel)]="barcode" placeholder="it's easy!'" readonly></ion-input></div>
+</ion-content>

@@ -11,7 +11,7 @@
                 <span class="item-text">{{item.text}}</span>
                 <ion-icon name="arrow-forward"></ion-icon>
             </button>
-            <div class="item-popup" *ngIf="item.popup">
+            <div class="item-popup" [class.open]="item.popup">
                 <img class="popup-img" src="./assets/{{item.popupImg}}">
                 <div class="popup-header" [innerHtml]="item.popupHeader"></div>
                 <div class="popup-body" [innerHtml]="item.popupBody"></div>
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <div id="pu-bg" *ngIf="popup" (click)="closePopup()">
+    <div id="pu-bg" [class.open]="popup" (click)="closePopup()">
         <img id="closepu" src="./assets/exit.png">
     </div>
 </ion-content>

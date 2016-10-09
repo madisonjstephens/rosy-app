@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { RefillPage } from '../refill/refill';
 
 @Component({
   selector: 'page-profile',
@@ -42,6 +43,9 @@ export class ProfilePage {
     }
     
     toggleDropdown(dropdown) {
+        if (dropdown.title === 'refill a prescription') {
+            this.navCtrl.push(RefillPage);
+        }
         dropdown.open = !dropdown.open;
     }
     

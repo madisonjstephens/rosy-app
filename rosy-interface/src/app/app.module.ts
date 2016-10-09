@@ -9,6 +9,7 @@ import { ResourcesPage } from '../pages/resources/resources';
 import { OnboardingPage } from '../pages/onboarding/onboarding';
 import { ProfilePage } from '../pages/profile/profile';
 import { NewsPage } from '../pages/news/news';
+import { RefillPage } from '../pages/refill/refill';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NewsPage } from '../pages/news/news';
     ProfilePage,
     ResourcesPage,
     OnboardingPage,
-    NewsPage
+    NewsPage,
+    RefillPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -35,7 +37,8 @@ import { NewsPage } from '../pages/news/news';
     ProfilePage,
     ResourcesPage,
     OnboardingPage,
-    NewsPage
+    NewsPage,
+    RefillPage
   ],
   providers: []
 })
