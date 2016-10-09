@@ -9,6 +9,7 @@ import { BarcodeScanner } from 'ionic-native';
   templateUrl: 'refill.html'
 })
 export class RefillPage {
+    pharmacy;
     barcode: any;
     constructor(public navCtrl: NavController,
                 public http: Http) {

@@ -9,6 +9,7 @@ import { CrisisPage } from '../crisis/crisis';
   templateUrl: 'resources.html'
 })
 export class ResourcesPage {
+    search;
     bubbles: any[] = [
         {
             src: 'b1.png',
