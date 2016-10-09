@@ -1,0 +1,61 @@
+page-profile {
+    font-family: karla;
+    font-size: 17px;
+}
+
+page-profile ion-content {
+    background-image: -webkit-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+    background-image: -o-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+    background-image: linear-gradient(179deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+}
+
+#profpic {
+    position: absolute;
+    width: 122px;
+    top: 54px;
+    left: 127px;
+}
+
+#prof-dd {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+#profname {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Miniver;
+    font-size: 31px;
+    color: #000000;
+    text-shadow: 1px 3px 2px rgba(80,226,193,0.61);
+    height: 36px;
+}
+
+#profdesc {
+    text-align: center;
+    font-family: Karla-Italic;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+#bigstarleft {
+    width: 41px;
+    position: absolute;
+    left: 32px;
+    top: 135px;
+}
+
+#littlestarleft {
+    width: 13px;
+    position: absolute;
+    left: 24px;
+    top: 173px;
+}
+
+#medstarright {
+    width: 24px;
+    position: absolute;
+    right: 58px;
+    top: 140px;
+}

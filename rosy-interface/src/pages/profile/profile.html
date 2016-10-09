@@ -1,0 +1,14 @@
+<ion-content>
+    <img id="bgpic" src="./assets/bgpic.png">
+    <img id="profpic" src="./assets/avatar.png">
+    <div id="profname">Della Carter</div>
+    <div id="profdesc">age 30. austin, tx:</div>
+    <img id="bigstarleft" src="./assets/bigstarleft.png">
+    <img id="littlestarleft" src="./assets/littlestarleft.png">
+    <img id="medstarright" src="./assets/medstarright.png">
+    <div class="health-dropdowns" id="prof-dd">
+        <div *ngFor="let dropdown of dropdowns; let i = index" class="dropdown" [class.middle]="i > 0">
+            <button ion-button color="favorite" class="dropdown-header">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
+        </div>
+    </div>
+</ion-content>

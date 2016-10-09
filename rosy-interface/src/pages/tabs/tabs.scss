@@ -1,7 +1,16 @@
-.tabbar > .tab-button {
-    background: #d3d3d3;
+.tab-button {
+    background: rgba(85, 85, 86, 0.87) !important;
+}
+
+.tab-button[aria-selected="true"] {
+    color: #FFF;
+}
+
+.tab-button-text {
+    font-size: 11px !important;
+    color: #FFF !important;
 }
 
 .tabbar {
-    font-family: karla;
+    
 }

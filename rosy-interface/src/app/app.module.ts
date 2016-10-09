@@ -6,6 +6,7 @@ import { CyclePage } from '../pages/cycle/cycle';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { OnboardingPage } from '../pages/onboarding/onboarding';
+import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { OnboardingPage } from '../pages/onboarding/onboarding';
     CyclePage,
     HomePage,
     TabsPage,
+    ProfilePage,
     OnboardingPage
   ],
   imports: [
@@ -26,6 +28,7 @@ import { OnboardingPage } from '../pages/onboarding/onboarding';
     CyclePage,
     HomePage,
     TabsPage,
+    ProfilePage,
     OnboardingPage
   ],
   providers: []
