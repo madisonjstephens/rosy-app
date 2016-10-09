@@ -85,3 +85,15 @@ page-cycle ion-content {
     margin-top: 0;
     margin-bottom: 50px;
 }
+
+#cycle-dd .dropdown-header ion-icon {
+    -webkit-transition: all 1s ease;                  
+    -moz-transition: all 1s ease;                 
+    -o-transition: all 1s ease;   
+    -ms-transition: all 1s ease;          
+    transition: all 1s ease;
+}
+
+#cycle-dd .dropdown-header.open ion-icon {
+    transform: rotate(90deg);
+}

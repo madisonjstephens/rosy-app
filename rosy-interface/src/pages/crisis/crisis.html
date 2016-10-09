@@ -1,0 +1,13 @@
+<ion-content>
+    <img id="health-planet" src="./assets/healthplanet.png">
+    <div id="health-message">
+        <span>you're not alone!<br>we're here for you, 24/7</span>
+    </div>
+    <div class="health-dropdowns">
+        <div *ngFor="let dropdown of dropdowns; let i = index" class="dropdown" [class.middle]="i > 0">
+            <button ion-button color="favorite" class="dropdown-header">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
+        </div>
+    </div>
+    <div class="add-new"><ion-icon name="add"></ion-icon> write a journal entry</div>
+    <div class="add-new"><ion-icon name="camera"></ion-icon> add to photo diary</div>
+</ion-content>

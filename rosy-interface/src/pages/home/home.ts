@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { RefillPage } from '../refill/refill';
+import { ProfilePage } from '../profile/profile';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'page-home',
@@ -8,6 +12,8 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
     private popup: any;
+    private todo: any;
+    private task: any;
     private myList: any[] = [
         {
             icon: "lightning.png",
@@ -40,7 +46,7 @@ export class HomePage {
                         dr. mark greene<br>
                         refills: 2 before 5/10/2017<br><br>
                         pharmacy: rite aid first ave`,
-            popupAction: () => { alert('ok')},
+            popupAction: () => { this.navCtrl.push(RefillPage)},
             popupActionText: 'refill'
         },
         {
@@ -61,8 +67,13 @@ export class HomePage {
         
     ]
 
-    constructor(public navCtrl: NavController) {
-
+    constructor(public navCtrl: NavController,
+                private http: Http) {
+    
+    }
+    
+    openTodo() {
+        this.todo = true;
     }
     
     openPopup(item) {
@@ -71,7 +82,88 @@ export class HomePage {
     }
     
     closePopup() {
-        this.popup.popup = false;
-        this.popup = undefined;
+        this.todo = false;
+        this.task = undefined;
+        if (this.popup) {
+            this.popup.popup = false;
+            this.popup = undefined;
+        }
+    }
+    
+    get suggestions() {
+        if (!this.task) {
+            return;
+        }
+        if (this.task.includes("refill") || this.task.includes("prescription") || this.task.includes("rx") || this.task.includes("script") || this.task.includes("pharmacy") || (this.task.includes("pill") && !this.task.includes("take pill"))) {
+            return 0;
+        } else if (this.task.includes("appointment") || this.task.includes("doctor") || this.task.includes("annual")) {
+            return 1;
+        } else if (this.task.includes("coffee") || this.task.includes("forget") || this.task.includes("take pill") || this.task.includes("meet")) {
+            return 2;
+        } else {
+            return 4;
+        }
+    }
+    
+    navPush(i) {
+        let toNav = [RefillPage, ProfilePage, "OOPS"];
+        this.navCtrl.push(toNav[i]);
+    }
+
+    getTasks() {
+        this.http.get("https://udjtloq8g2.execute-api.us-east-1.amazonaws.com/prod/username/angel/gettasks")
+                 .map((res) => res.json())
+                 .subscribe((data) => {
+                     data.tasks.forEach((task) => {
+                         this.myList.unshift({
+                             icon: task.taskIcon,
+                             text: task.taskName,
+                             popup: false,
+                             popupImg: "refill.png",
+                             popupHeader: task.taskDescription,
+                             popupBody: task.taskContent,
+                             popupAction: () => { this.navCtrl.push(RefillPage)},
+                             popupActionText: 'refill'
+                         });
+                     });
+                 });
+    }
+    
+    getLastTask() {
+        this.http.get("https://udjtloq8g2.execute-api.us-east-1.amazonaws.com/prod/username/angel/gettasks")
+                 .map((res) => res.json())
+                 .subscribe((data) => {
+                     let task = data.tasks[0];
+                     if (!task) {
+                         return;
+                     }
+                     this.myList.unshift({
+                         icon: task.taskIcon,
+                         text: task.taskName,
+                         popup: false,
+                         popupImg: "refill.png",
+                         popupHeader: task.taskDescription,
+                         popupBody: task.taskContent,
+                         popupAction: () => { this.navCtrl.push(RefillPage)},
+                         popupActionText: 'refill'
+                    });
+                 });
+    }
+    
+    addNewItem() {
+        let data = {
+            "username": "angel",
+            "taskIcon": "",
+            "taskName": this.task,
+            "taskDescription": "spironolactone<br>75 mg tablet",
+            "taskContent": "take one tablet by mouth once daily<br><br>rx#: 05432 0989023<br>dr. mark greene<br>refills: 2 before 5/10/2017<br><br>pharmacy: rite aid first ave",
+            "taskType": "refill"
+        };
+        this.http.post("https://udjtloq8g2.execute-api.us-east-1.amazonaws.com/prod/username/angel/gettasks", data)
+                 .map((res) => res.json())
+                 .subscribe((data) => {
+                     console.log(data);
+                     this.getLastTask();
+                 });
     }
 }

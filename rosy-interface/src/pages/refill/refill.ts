@@ -8,13 +8,14 @@ import { BarcodeScanner } from 'ionic-native';
   templateUrl: 'refill.html'
 })
 export class RefillPage {
+    private barcode: any;
     constructor(public navCtrl: NavController) {
 
     }
     
     scanBarcode() {
         BarcodeScanner.scan().then((barcodeData) => {
-            console.log(barcodeData);
+            this.barcode = barcodeData;
         }, (err) => {
             console.log(err);
         });

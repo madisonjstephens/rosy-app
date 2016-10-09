@@ -10,6 +10,7 @@ import { OnboardingPage } from '../pages/onboarding/onboarding';
 import { ProfilePage } from '../pages/profile/profile';
 import { NewsPage } from '../pages/news/news';
 import { RefillPage } from '../pages/refill/refill';
+import { CrisisPage } from '../pages/crisis/crisis';
 
 @NgModule({
   declarations: [

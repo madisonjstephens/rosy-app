@@ -10,7 +10,13 @@
     </div>
     <div class="health-dropdowns" id="cycle-dd">
         <div *ngFor="let dropdown of dropdowns; let i = index" class="dropdown" [class.middle]="i > 0">
-            <button ion-button color="favorite" class="dropdown-header">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
+            <button ion-button color="favorite" class="dropdown-header" [class.open]="dropdown.open && i === 0" (click)="toggleDropdown(dropdown)">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
+            <div class="dd-body" [class.open]="dropdown.open && i === 0">
+                ovulation; period start - end
+                <div *ngFor="let entry of diary">
+                    {{entry.ovulation}}; {{entry.start}} - {{entry.end}}
+                </div>
+            </div>
         </div>
     </div>
 </ion-content>

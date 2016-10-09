@@ -68,8 +68,8 @@ page-home ion-content {
     z-index: 99999;
     position: fixed;
     top: 190px;
-    margin: 0 auto;
-    width: 95%;
+    left: 0;
+    width: 100%;
     background: #C6F7EC;
     border: 2px solid #FFF;
     border-radius: 2px;
@@ -147,4 +147,62 @@ page-home ion-content {
     border-radius: 1px;
     width: 100px;
     height: 35px;
+}
+
+#add-pu-header ion-input {
+    width: 90%;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-radius: 3px;
+    height: 35px;
+    background: #FFF;
+}
+
+#add-pu-header input {
+    margin-top: 1px;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+#sugz,#recent,#dline {
+    height: 50px;
+}
+
+#sugz {
+    position: relative;
+    top: -5px;
+}
+
+#sugz img {
+    width: 30px;
+    position: relative;
+    top: 12px;
+    margin-right: 10px;
+}
+
+#recent img {
+    width: 30px;
+    position: relative;
+    top: 12px;
+    margin-right: 10px;
+}
+
+#dline img {
+    width: 30px;
+    position: relative;
+    top: 10px;
+    margin-right: 10px;
+}
+
+#suggestions {
+    text-align: center;
+}
+
+#suggestions.popup-action {
+    position: relative;
+    left: -10px;
+}
+
+#suggestions.popup-action button {
+    width: 200px;
 }

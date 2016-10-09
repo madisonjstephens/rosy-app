@@ -1,6 +1,6 @@
 <ion-content>
     <img id="smiley" src="./assets/wink.png">
-    <img *ngIf="!popup" id="add-new-thing" src="./assets/add-button.png">
+    <img *ngIf="!popup && !todo" id="add-new-thing" src="./assets/add-button.png" (click)="openTodo()">
     <div class="subheader">hey girl, u ready to slay today?</div>
     <div id="items">
         <div *ngFor="let item of myList">
@@ -19,7 +19,22 @@
             </div>
         </div>
     </div>
-    <div id="pu-bg" [class.open]="popup" (click)="closePopup()">
+    <div class="item-popup" [class.open]="todo">
+        <img class="popup-img" src="./assets/todo.png">
+        <div class="popup-header" id="add-pu-header"><ion-input type="text" [(ngModel)]="task" placeholder="you got this!"></ion-input></div>
+        <div class="popup-body">
+            <div id="recent"><img src="./assets/rcnt.png"> recent items</div>
+            <div id="sugz"><img src="./assets/alien.png"> suggestions</div>
+            <div id="dline"><img src="./assets/dline.png"> include a deadline</div>
+            <div id="suggestions" class="popup-action">
+                <button ion-button color="light" *ngIf="suggestions === 0" (click)="navPush(0)">refill a prescription?</button>
+                <button ion-button color="light" *ngIf="suggestions === 1" (click)="navPush(1)">make an appointment?</button>
+                <button ion-button color="light" *ngIf="suggestions === 2" (click)="navPush(2)">set a reminder?</button>
+            </div>
+        </div>
+        <div class="popup-action"><button ion-button color="light" (click)="addNewItem()">add</button></div>
+    </div>
+    <div id="pu-bg" [class.open]="popup || todo" (click)="closePopup()">
         <img id="closepu" src="./assets/exit.png">
     </div>
 </ion-content>
