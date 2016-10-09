@@ -21,6 +21,18 @@ page-profile ion-content {
     margin-bottom: 50px;
 }
 
+#prof-dd .dropdown-header ion-icon {
+    -webkit-transition: all 1s ease;                  
+    -moz-transition: all 1s ease;                 
+    -o-transition: all 1s ease;   
+    -ms-transition: all 1s ease;          
+    transition: all 1s ease;
+}
+
+#prof-dd .dropdown-header.open ion-icon {
+    transform: rotate(90deg);
+}
+
 #profname {
     text-align: center;
     margin-top: 50px;
@@ -61,9 +73,88 @@ page-profile ion-content {
 }
 
 .dd-body {
+    max-height: 0px;
+    overflow-y: hidden;
     width: 95%;
     margin: 0 auto;
+    -webkit-transition: all 1s ease;                  
+    -moz-transition: all 1s ease;                 
+    -o-transition: all 1s ease;   
+    -ms-transition: all 1s ease;          
+    transition: all 1s ease;
+}
+
+.dd-body.open {
+    max-height: 420px;
     border-top: 2px solid #FFF;
     padding: 5px;
     padding-left: 10px;
+}
+
+.apt-input {
+    background: rgba(255,255,255,0.7);
+    margin-bottom: 5px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+.apt-input-checkbox {
+    background: rgba(255,255,255,0.7);
+    margin-bottom: 5px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 17px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.apt-input-checkbox ion-checkbox {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+}
+
+.apt-input > ion-input,
+.apt-input > ion-datetime {
+    line-height: 0;
+    width: 220px;
+    float: right;
+}
+
+.apt-input > ion-input > input {
+    padding-right: 0 !important;
+    text-align: right;
+}
+
+#docemail {
+    width: 150px;
+}
+
+#aptdate {
+    width: 115px;
+    display: inline-block;
+    z-index: 999;
+    position: relative;
+}
+
+#aptdate button {
+    display: none;
+}
+
+#date-cal {
+    position: relative;
+    right: -180px;
+    color: rgba(0,0,0,0.4);
+    z-index: 0;
+}
+
+#apt-textarea {
+    background: rgba(255,255,255,0.7);
+    margin-bottom: 5px;
+    height: 100px;
+    font-size: 17px;
+    padding: 1px 10px;
+    position: relative;
 }

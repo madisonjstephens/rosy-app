@@ -8,10 +8,15 @@
     <img id="medstarright" src="./assets/medstarright.png">
     <div class="health-dropdowns" id="prof-dd">
         <div *ngFor="let dropdown of dropdowns; let i = index" class="dropdown" [class.middle]="i > 0">
-            <button ion-button color="favorite" class="dropdown-header" (click)="toggleDropdown(dropdown)">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
-            <div class="dd-body" *ngIf="dropdown.open && i === 3">
-                <div class="apt-input">email<ion-input type="text" [(ngModel)]="email" placeholder="your email address"></ion-input></div>
-                <div class="login-input">password<ion-input id="password" type="password" [(ngModel)]="password" placeholder="make it tough!"></ion-input></div>
+            <button ion-button color="favorite" [class.open]="dropdown.open && i === 3" class="dropdown-header" (click)="toggleDropdown(dropdown)">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
+            <div class="dd-body" [class.open]="dropdown.open && i === 3">
+                <div class="apt-input">doc's name<ion-input type="text" [(ngModel)]="name" placeholder="mark greene, like last time?"></ion-input></div>
+                <div class="apt-input">doc office email<ion-input id="docemail" type="email" [(ngModel)]="email" placeholder="we'll contact them"></ion-input></div>
+                <div class="apt-input">when?<ion-datetime id="aptdate" type="date" [(ngModel)]="date"></ion-datetime><span id="date-cal" *ngIf="!date">pick a date</span></div>
+                <div class="apt-input-checkbox">attach your journals<ion-checkbox color="favorite" [(ngModel)]="journals"></ion-checkbox></div>
+                <div class="apt-input-checkbox">attach height & weight<ion-checkbox color="favorite" [(ngModel)]="wh"></ion-checkbox></div>
+                <div id="apt-textarea"><ion-textarea [(ngModel)]="xtra" placeholder="write your own email (or just press send and we'll write it for you)"></ion-textarea></div>
+                <button ion-button color="secondary" class="rosy-button" (click)="sendEmail(dropdown)">send!</button>
             </div>
         </div>
     </div>
