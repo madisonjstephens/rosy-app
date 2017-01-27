@@ -1,0 +1,88 @@
+page-crisis {
+    font-family: karla;
+    font-size: 17px;
+}
+
+page-crisis ion-content {
+    background-image: -webkit-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+    background-image: -o-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+    background-image: linear-gradient(179deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+}
+
+#health-planet {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#health-message {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 15px 0px;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+    border-top: 3px solid #FFF;
+    border-bottom: 3px solid #FFF;
+}
+
+.health-dropdowns {
+    margin-top: 10px;
+    border: 3px solid #FFF;
+    font-family: karla-italic-bold
+}
+
+.dropdown {
+    background: #C6F7EC !important;
+}
+
+.dropdown.middle {
+    border-top: 3px solid #FFF;
+}
+
+.dropdown-header {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    border-radius: 0px;
+    margin: 0;
+}
+
+.dropdown-header .button-inner {
+    display: inline-block;
+}
+
+.dropdown-header ion-icon {
+    position: absolute;
+    right: 10px;
+    top: 1px;
+}
+
+#alnhg {
+    width: 267px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: block;
+}
+
+#health-message.not-alone {
+    margin-top: 10px !important;
+}
+
+#crisis-dd {
+    width: 100%;
+    padding: 0;
+    border: none;
+}
+
+#crisis-dd.open {
+    max-height: 160px;
+}
+
+#crisis-dd > button {
+    font-family: karla;
+}

@@ -1,0 +1,18 @@
+<ion-content>
+    <img id="apple" src="./assets/nutrition.png">
+    <img id="strz" src="./assets/stress.png">
+    <img id="pgncy" src="./assets/pregnancy.png">    
+    <div id="health-message" class="refill-message">
+        <span>refill</span>
+    </div>
+    <div class="apt-input" (click)="scanBarcode()">tap here to scan <ion-input type="text" [(ngModel)]="barcode" placeholder="----" readonly></ion-input></div>
+    <div class="apt-input-select">
+        pharmacy
+        <ion-select class="apt-input-select" [(ngModel)]="pharmacy" placeholder="choose">
+            <ion-option value="riteaid">RiteAid</ion-option>
+            <ion-option value="cvs">CVS</ion-option>
+            <ion-option value="walgreens">Walgreens</ion-option>
+        </ion-select>
+    </div>
+    <button ion-button color="favorite" class="rosy-button" (click)="popCurrent()">refill</button>
+</ion-content>

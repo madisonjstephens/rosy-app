@@ -1,0 +1,18 @@
+<ion-content>
+    <img id="alnhg" src="./assets/alienheading.png">
+    <div id="health-message" class="not-alone">
+        <span>you're not alone!<br>we're here for you, 24/7</span>
+    </div>
+    <div class="health-dropdowns">
+        <div *ngFor="let dropdown of dropdowns; let i = index" class="dropdown" [class.middle]="i > 0">
+            <button ion-button color="favorite" class="dropdown-header" (click)="toggleDropdown(dropdown)" [class.open]="dropdown.open && i === 1">{{dropdown.title}}<ion-icon name="arrow-forward"></ion-icon></button>
+            <div class="dd-body" id="crisis-dd" [class.open]="dropdown.open && i === 1">
+                <button ion-button color="g1" class="dropdown-header">emergency contraception<ion-icon name="arrow-forward"></ion-icon></button>
+                <button ion-button color="g1" class="dropdown-header">local clinics<ion-icon name="arrow-forward"></ion-icon></button>
+                <button ion-button color="g1" class="dropdown-header">abortion laws by state<ion-icon name="arrow-forward"></ion-icon></button>
+                <button ion-button color="g1" class="dropdown-header">other options<ion-icon name="arrow-forward"></ion-icon></button>
+            </div>
+        </div>
+    </div>
+    <div class="add-new" (click)="callForHelp()"><ion-icon name="call"></ion-icon> want to talk? give us a call</div>
+</ion-content>

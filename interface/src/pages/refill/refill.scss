@@ -1,0 +1,55 @@
+page-refill {
+    font-family: karla;
+    font-size: 17px;
+}
+
+page-refill ion-content {
+    background-image: -webkit-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+    background-image: -o-linear-gradient(89deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+    background-image: linear-gradient(179deg, #FFFFFF 6%, #FCECF4 20%, #FADCEB 61%) !important;
+}
+
+#apple {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+#strz {
+    position: absolute;
+    top: 40px;
+    left: 155px;
+}
+
+#pgncy {
+    position: absolute;
+    top: 45px;
+    left: 290px;
+}
+
+#health-message.refill-message {
+    margin-top: 150px;
+    margin-bottom: 15px;
+    font-family: miniver;
+}
+
+.apt-input-select {
+    background: rgba(255,255,255,0.7);
+    margin-bottom: 5px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 17px;
+    padding-left: 10px;
+    position: relative;
+    margin: 0;
+}
+
+.apt-input-select ion-select {
+    background: none;
+    float: right;
+}
+
+.apt-input-select .select-text {
+    position: relative;
+    line-height: 17px;
+}

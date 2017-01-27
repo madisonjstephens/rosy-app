@@ -1,0 +1,72 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+$text-color:        #000;
+$background-color:  #C6F7EC;
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #387ef5,
+  secondary:  #FADFEC,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  favorite:   #C6F7EC,
+  g1: #A3F0DF
+);
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+$ionicons-font-path: "../assets/fonts";
+@import "ionicons";
+
+@font-face {
+    font-family: "karla";
+    src: url("../assets/fonts/Karla-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "karla-italic";
+    src: url("../assets/fonts/Karla-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "karla-italic-bold";
+    src: url("../assets/fonts/Karla-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "miniver";
+    src: url("../assets/fonts/Miniver-Regular.ttf") format("truetype");
+}
